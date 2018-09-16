@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>OpenAI Five Benchmark: Results</title>
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://blog.openai.com/openai-five-benchmark-results/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta property="og:site_name" content="OpenAI Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="OpenAI Five Benchmark: Results" />
+    <meta property="og:description" content="Yesterday, OpenAI Five won a best-of-three against a team of 99.95th percentile Dota players: Blitz, Cap, Fogged, Merlini, and MoonMeander — four of whom have played Dota professionally — in front of a live audience and 100,000 concurrent livestream viewers. The human team won game three after the audience adversarially" />
+    <meta property="og:url" content="https://blog.openai.com/openai-five-benchmark-results/" />
+    <meta property="og:image" content="https://blog.openai.com/content/images/2018/08/main.jpg" />
+    <meta property="article:published_time" content="2018-08-06T16:14:22.000Z" />
+    <meta property="article:modified_time" content="2018-08-06T16:15:05.000Z" />
+    <meta property="article:tag" content="OpenAI&amp;#x27;s Dota team" />
+
+    <meta property="article:publisher" content="https://www.facebook.com/openai.research" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OpenAI Five Benchmark: Results" />
+    <meta name="twitter:description" content="Yesterday, OpenAI Five won a best-of-three against a team of 99.95th percentile Dota players: Blitz, Cap, Fogged, Merlini, and MoonMeander — four of whom have played Dota professionally — in front of a live audience and 100,000 concurrent livestream viewers. The human team won game three after the audience adversarially" />
+    <meta name="twitter:url" content="https://blog.openai.com/openai-five-benchmark-results/" />
+    <meta name="twitter:image" content="https://blog.openai.com/content/images/2018/08/main.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="OpenAI" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="OpenAI&#x27;s Dota team" />
+    <meta name="twitter:site" content="@openai" />
+    <meta property="og:image:width" content="3000" />
+    <meta property="og:image:height" content="2000" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "OpenAI Blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.openai.com/content/images/2017/03/twitter.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "OpenAI",
+        "url": "https://blog.openai.com/author/openai/",
+        "sameAs": []
+    },
+    "headline": "OpenAI Five Benchmark: Results",
+    "url": "https://blog.openai.com/openai-five-benchmark-results/",
+    "datePublished": "2018-08-06T16:14:22.000Z",
+    "dateModified": "2018-08-06T16:15:05.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.openai.com/content/images/2018/08/main.jpg",
+        "width": 3000,
+        "height": 2000
+    },
+    "keywords": "OpenAI's Dota team",
+    "description": "Yesterday, OpenAI Five won a best-of-three against a team of 99.95th percentile Dota players: Blitz, Cap, Fogged, Merlini, and MoonMeander — four of whom have played Dota professionally — in front of a live audience and 100,000 concurrent livestream viewers. The human team won game three after the audience adversarially",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.openai.com/"
+    }
+}
+    </script>
+
+    <script src="/public/ghost-sdk.min.js?v=a52c934624"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "710c928a5473"
+});
+</script>
+    <meta name="generator" content="Ghost 1.25" />
+    <link rel="alternate" type="application/rss+xml" title="OpenAI Blog" href="https://blog.openai.com/rss/" />
+
+  <link rel="icon" href="/assets/images/favicon/favicon.ico">
+  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="blog.css" />
+
+
+          <meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body class="post-template tag-openais-dota-team">
+
+
+  <main class="Main">
+
+    <div class="MainContent">
+
+      <div class="Shared-Navigation">
+  <div class="Shared-Navigation-logo">
+    <a href="https://openai.com/"
+       title="OpenAI"
+       class="Shared-Navigation-link
+              Shared-Navigation-link--logo">
+      <img class="logo" src="/assets/images/navigation/nav-logo.svg?v=a52c934624" width="27" height="27" alt="OpenAI" />
+    </a>
+  </div>
+
+  <div class="Shared-Navigation-linksContainer">
+
+
+        <div class="Shared-Navigation-link
+                    Shared-Navigation-mobileNavToggle"
+             ontouchstart="">
+             <!-- Note: ontouchstart makes :active work -->
+          <div class="Shared-Navigation-mobileNavIconContainer">
+            <div class="Shared-Navigation-mobileOpen"></div>
+            <div class="Shared-Navigation-mobileClose"></div>
+          </div>
+        </div>
+
+        <div class="Shared-Navigation-MobileContainer">
+
+          <div class="container-fluid">
+
+        <div class="row
+                    center-xs">
+          <div class="col-xs-9
+                      col-sm-6">
+
+            <ul class="Shared-Navigation-list">
+              <li class="Shared-Navigation-listItem-0">
+                <a class="Shared-Navigation-link Shared-Navigation-link--listLink" href="https://openai.com/research">Research</a>
+              </li>
+              <li class="Shared-Navigation-listItem-1">
+                  <a class="Shared-Navigation-link Shared-Navigation-link--listLink" href="https://openai.com/systems">Systems</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-xs-9
+                      col-sm-6">
+
+            <ul class="Shared-Navigation-list
+                       Shared-Navigation-list--rightAligned">
+              <li class="Shared-Navigation-listItem-2">
+                <a class="Shared-Navigation-link Shared-Navigation-link--listLink" href="https://openai.com/about">About</a>
+                </li>
+              <li class="Shared-Navigation-listItem-3">
+                <a class="Shared-Navigation-link
+                          Shared-Navigation-link--listLink
+                          Shared-Navigation-link--selected" href="https://blog.openai.com/">Blog</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+     </div>
+    </div>
+
+
+  </div><!-- ./Shared-Navigation-linksContainer -->
+</div><!-- ./Shared-Navigation -->
+
+
+
+  <article class="Post post tag-openais-dota-team" id="openai-five-benchmark-results">
+
+    <header class="PostHeader">
+
+      <div class="PostHeader-background">
+        <svg class="icon" width="100%" height="100%" viewBox="0 0 330 418"
+          preserveAspectRatio="none">
+        </svg>
+        <div class="PostHeader-background-glare"></div>
+      </div>
+
+      <div class="PostHeader-inner">
+
+        <span class="PostHeader-iconContainer">
+          <span class="Shared-Card-iconCSS">
+            <span class="Shared-Card-iconCSS-img
+
+
+
+
+                        "></span>
+          </span>
+        </span>
+
+        <h1 class="PostHeader-title
+                  balance-text"><span>OpenAI Five Benchmark: Results</span></h1>
+        <section class="PostHeader-meta">
+          <time class="PostHeader-meta-date"
+                datetime="2018-08-06">
+            August 6, 2018
+          </time>
+        </section>
+      </div>
+    </header>
+
+    <section class="PostContent post-content">
+      <div class="kg-card-markdown"><p>Yesterday, <a href="https://blog.openai.com/openai-five/">OpenAI Five</a> won a best-of-three against a team of 99.95th percentile Dota players: <a href="https://liquipedia.net/dota2/Blitz">Blitz</a>, <a href="https://liquipedia.net/dota2/Capitalist">Cap</a>, <a href="https://liquipedia.net/dota2/Fogged">Fogged</a>, <a href="https://liquipedia.net/dota2/Merlini">Merlini</a>, and <a href="https://liquipedia.net/dota2/MoonMeander">MoonMeander</a> — four of whom have played Dota professionally — in front of a live audience and 100,000 concurrent livestream viewers. The human team won game three after the audience adversarially selected Five's heroes. We also showed our preliminary work to introspect Five's view of the game, including its probability of winning, which made predictions surprising to the human observers. These results show that Five is a step towards advanced AI systems which can handle the complexity and uncertainty of the <a href="https://blog.openai.com/learning-dexterity/">real world</a>.</p>
+<p><em>In case you missed it: the livestream from the Benchmark commentated by <a href="https://twitter.com/PurgeGamers">Purge</a> and <a href="https://twitter.com/ODPixel">ODPixel</a>. <a href="https://twitter.com/cbd/status/1026182729291812864">Christy</a> and <a href="https://twitter.com/gdb/status/1026175234825547776">Greg</a> also both livetweeted the event.</em></p>
+
+<h1 id="overviewoftheday">Overview of the day</h1>
+<h2 id="audiencegame">Audience game</h2>
+<p>The day began with a team of volunteers from the audience bravely playing the first public match against OpenAI Five.</p>
+
+<p>Five won within the first 14 minutes (an evenly-matched game generally takes 45 minutes).</p>
+<h2 id="games12">Games 1 &amp; 2</h2>
+<p><img src="/content/images/2018/08/DSC_7477-1.jpg" alt="DSC_7477-1"> <em>Team solidarity before the match.</em></p>
+<p>In late June we added a win probability output to our neural network to introspect what OpenAI Five is predicting. When later considering drafting, we realized we could use this to evaluate the win probability of any draft: just look at the prediction on the first frame of a game with that lineup. In one week of implementation, we crafted a fake frame for each of the 11 million possible team matchups and wrote a tree search to find OpenAI Five's optimal draft.</p>
+</div>
+    </section>
+</footer>  </article>
+    </div>
+
+    <footer class="Shared-Footer">
+
+  <div class="Shared-Footer-linksContainer">
+
+    <div class="container-fluid">
+<!--
+        <div class="row">
+          <div class="col-xs-9
+                      col-sm-6">-->
+
+        <div class="Shared-Footer-wrap">
+
+            <ul class="Shared-Footer-list">
+
+              <li class="">
+                <a class="Shared-Footer-link
+                          Shared-Footer-link--listLink"
+                   href="https://openai.com/research/">Research</a>
+              </li>
+
+              <li class="">
+                <a class="Shared-Footer-link
+                          Shared-Footer-link--listLink"
+                   href="https://openai.com/systems/">Systems</a>
+              </li>
+
+              <li class="Shared-Footer-separated-x">
+                <a class="Shared-Footer-link
+                          Shared-Footer-link--listLink" href="https://openai.com/about/">About</a>
+              </li>
+              <li class="">
+                <a class="Shared-Footer-link
+                          Shared-Footer-link--listLink" href="https://blog.openai.com/">Blog</a>
+              </li>
+              <li class="">
+                <a class="Shared-Footer-link
+                          Shared-Footer-link--listLink" href="https://openai.com/jobs/">Jobs</a>
+              </li>
+            </ul>
+
+          <!--</div>
+
+          <div class="col-xs-3
+                      col-sm-6">-->
+            <section class="Shared-Footer-social">
+              <a class="Shared-Footer-link
+                        Shared-Footer-link--image
+                        Shared-Footer-link--twitter" href="https://twitter.com/openai">Twitter</a>
+              <a class="Shared-Footer-link
+                        Shared-Footer-link--image
+                        Shared-Footer-link--facebook" href="https://www.facebook.com/openai.research">Facebook</a>
+            </section>
+          <!--</div>
+
+        </div>-->
+
+        </div>
+
+    </div>
+
+  </div><!-- ./Shared-Footer-linksContainer -->
+</footer><!-- ./Shared-Footer -->
+  </main>
+
+
+  <script type="text/javascript" src="/assets/js/app.js?v=a52c934624"></script>
+
+
+
+<svg width="0" height="0" viewBox="0 0 330 418" style='visibility:hidden;width:0;height:0;display:block;'>
+
+  <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
+  </filter>
+
+  <defs>
+    <linearGradient id="blue">
+      <stop offset="0" stop-color="rgb(94,33,217)" />
+      <stop offset="1" stop-color="rgb(18,165,226)" />
+    </linearGradient>
+    <linearGradient id="blue_green">
+      <stop offset="0" stop-color="rgb(47,134,215)"/>
+      <stop offset="1" stop-color="rgb(28,245,186)"/>
+    </linearGradient>
+    <linearGradient id="cyan">
+      <stop offset="0" stop-color="rgb(64,100,216)"/>
+      <stop offset="1" stop-color="rgb(74,216,221)"/>
+    </linearGradient>
+    <linearGradient id="purple">
+      <stop offset="0" stop-color="rgb(90,64,216)"/>
+      <stop offset="1" stop-color="rgb(216,74,221)"/>
+    </linearGradient>
+    <linearGradient id="red">
+      <stop offset="0" stop-color="rgb(183,24,102)"/>
+      <stop offset="1" stop-color="rgb(235,52,52)"/>
+    </linearGradient>
+    <linearGradient id="orange">
+      <stop offset="0" stop-color="rgb(211,56,56)"/>
+      <stop offset="1" stop-color="rgb(242,153,38)"/>
+    </linearGradient>
+    <linearGradient id="yellow">
+      <stop offset="0" stop-color="rgb(232,91,6)"/>
+      <stop offset="1" stop-color="rgb(229,231,42)"/>
+    </linearGradient>
+    <linearGradient id="green">
+      <stop offset="0" stop-color="rgb(13,163,130)"/>
+      <stop offset="1" stop-color="rgb(103,228,78)"/>
+    </linearGradient>
+    <linearGradient id="black">
+      <stop offset="0" stop-color="rgb(0,0,0)"/>
+      <stop offset="1" stop-color="rgb(38,38,38)"/>
+    </linearGradient>
+    <linearGradient id="slate-dark">
+      <stop offset="0" stop-color="rgb(34,34,34)"/>
+      <stop offset="1" stop-color="rgb(69,69,77)"/>
+    </linearGradient>
+    <linearGradient id="slate-mid">
+      <stop offset="0" stop-color="rgb(59,62,76)"/>
+      <stop offset="1" stop-color="rgb(102,102,120)"/>
+    </linearGradient>
+    <linearGradient id="slate-light">
+      <stop offset="0" stop-color="rgb(137,137,155)"/>
+      <stop offset="1" stop-color="rgb(181,181,196)"/>
+    </linearGradient>
+
+
+    <!-- Outer shape -->
+    <symbol id="outer">
+      <path d="M268.7 12c-10.16-4.21-26.79-4.21-37 0l-137 56.74C84.61 73 72.85 84.71 68.64 94.87l-56.74 137c-4.21 10.16-4.21 26.79 0 37l56.74 137c4.21 10.16 16 21.92 26.13 26.13l137 56.74c10.16 4.21 26.79 4.21 37 0l137-56.74c10.16-4.21 21.92-16 26.13-26.13l56.74-137c4.21-10.16 4.21-26.79 0-37l-56.74-137c-4.21-10.16-16-21.92-26.13-26.13z" />
+    </symbol>
+
+    <!-- Inner shape -->
+    <symbol id="inner">
+      <path d="M250.22 56.28l-137.2 56.84-56.84 137.21 56.84 137.21 137.21 56.83 137.2-56.84 56.84-137.21-56.84-137.2-137.21-56.84z"/>
+    </symbol>
+
+    <mask id="outerMask" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="500">
+      <rect x="0" y="0" width="500" height="500" fill="white"/>
+      <use filter="url(#f1)" xlink:href="#outer" />
+    </mask>
+
+    <mask id="outlineMask" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="500">
+      <use fill="white" xlink:href="#outer" />
+      <use fill="black" xlink:href="#inner" />
+    </mask>
+
+  </defs>
+  <symbol id="circle">
+    <path class="cls-1" d="M46.633,169.834A171,171,0,1,1-162.8,290.749,171,171,0,0,1,46.633,169.834Z"/>
+    <circle class="cls-2" cx="250.625" cy="98.984" r="171.063"/>
+  </symbol>
+  <symbol id="hexagon">
+    <path d="M103.728-104.851a20.335,20.335,0,0,0-13.505,0L-16.926-60.458a20.338,20.338,0,0,0-9.549,9.55L-70.851,56.249a20.338,20.338,0,0,0,0,13.506L-26.458,176.9a20.343,20.343,0,0,0,9.551,9.55L90.249,230.828a20.336,20.336,0,0,0,13.505,0L210.9,186.435a20.337,20.337,0,0,0,9.549-9.55L264.828,69.729a20.336,20.336,0,0,0,0-13.505L220.435-50.926a20.337,20.337,0,0,0-9.551-9.549Z"/>
+    <path d="M186.713,201.118a20.332,20.332,0,0,0-13.506,0l-107.16,44.4a20.342,20.342,0,0,0-9.55,9.551L12.117,362.232a20.341,20.341,0,0,0,0,13.507L56.515,482.9a20.335,20.335,0,0,0,9.551,9.55l107.166,44.38a20.334,20.334,0,0,0,13.507,0l107.159-44.4a20.339,20.339,0,0,0,9.55-9.552l44.38-107.166a20.338,20.338,0,0,0,0-13.506l-44.4-107.16a20.343,20.343,0,0,0-9.552-9.55Z"/>
+  </symbol>
+  <symbol id="square">
+    <path d="M184.988,276.989a14.03,14.03,0,0,1,0,19.774L38.917,442.917a14.011,14.011,0,0,1-19.762,0L-126.916,296.762a14.027,14.027,0,0,1,0-19.773L19.155,130.835a14.009,14.009,0,0,1,19.762,0Z" transform="translate(0 -47)"/>
+    <path d="M464.677,206.029a14.843,14.843,0,0,1,0,20.932L309.948,381.673a14.846,14.846,0,0,1-20.933,0L134.286,226.96a14.844,14.844,0,0,1,0-20.931L289.015,51.317a14.847,14.847,0,0,1,20.934,0Z" transform="translate(0 -47)"/>
+  </symbol>
+  <symbol id="triangle">
+    <path d="M71.037-26.913c-4.7-8.144-12.378-8.144-17.074,0L-130,292.192c-4.695,8.144-.854,14.808,8.537,14.808H246.462c9.391,0,13.232-6.664,8.537-14.808Z"/>
+    <path d="M305-.476C299.5-10,290.5-10,285-.476L69.5,372.683C64,382.208,68.5,390,79.5,390h431c11,0,15.5-7.792,10-17.317Z"/>
+  </symbol>
+
+
+  <symbol id="hexagon-icon">
+    <g mask="url(#outlineMask)">
+      <rect mask="url(#outerMask)"  x="-50%" y="-50%" width="200%" height="200%" fill="black"/>
+      <rect mask="url(#outerMask)"  x="-50%" y="-50%" width="200%" height="200%" fill="black"/>
+      <rect mask="url(#outerMask)"  x="-50%" y="-50%" width="200%" height="200%" fill="black"/>
+    </g>
+  </symbol>
+</svg>
+
+
+
+  <!-- Segment snippet -->
+  <script type="text/javascript">
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+    analytics.load("6gG9RqmGss3RlZ1wdayfXrkImRHAx0hE");
+    analytics.page("Blog", "OpenAI Five Benchmark: Results");
+    }}();
+  </script>
+
+</body>
+</html>
